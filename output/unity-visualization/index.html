@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Little Witches in the Wood | Unity Storyboard</title>
+  <style>
+    :root { --paper:#eee9dd; --ink:#24382e; --muted:#637065; --line:#c9cabc; --moss:#48604a; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:radial-gradient(ellipse at 90% 0,#d4dccb,transparent 55%),var(--paper); font-family:Georgia,'Times New Roman',serif; }
+    main { max-width:1480px; margin:auto; padding:40px 40px 28px; }
+    header { display:flex; justify-content:space-between; gap:24px; align-items:end; margin-bottom:28px; }
+    .eyebrow, nav, .meta, .source, footer { font-family:'Courier New',monospace; }
+    .eyebrow { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--moss); }
+    h1 { font-size:clamp(30px,4vw,54px); font-weight:400; letter-spacing:-1.5px; margin:10px 0 6px; }
+    header p { margin:0; color:var(--muted); font-size:15px; }
+    .edition { border-top:1px solid var(--ink); padding-top:12px; min-width:190px; font-size:12px; line-height:1.6; }
+    nav { display:flex; border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-bottom:20px; }
+    nav button { border:0; border-bottom:3px solid transparent; padding:17px 24px; color:var(--muted); background:none; font:inherit; font-size:13px; cursor:pointer; text-align:left; }
+    nav button[aria-pressed=true] { color:var(--ink); border-bottom-color:var(--moss); }
+    button:focus-visible,a:focus-visible { outline:2px solid var(--moss); outline-offset:4px; }
+    figure { margin:0; background:#24382e; }
+    figure img { display:block; width:100%; aspect-ratio:16/9; object-fit:contain; }
+    figcaption { display:flex; justify-content:space-between; gap:20px; padding:12px 16px; color:#e4e9da; font-family:'Courier New',monospace; font-size:11px; }
+    .details { display:grid; grid-template-columns:1fr 1.25fr; gap:60px; padding:26px 0; border-bottom:1px solid var(--line); }
+    h2 { margin:0 0 10px; font-weight:400; font-size:27px; }
+    .details p { margin:0; font-size:16px; line-height:1.65; max-width:520px; }
+    .source { font-size:12px; line-height:1.8; }
+    .source div { display:grid; grid-template-columns:140px 1fr; gap:15px; margin:3px 0; }
+    .source span:first-child { color:var(--muted); }
+    a { color:inherit; text-underline-offset:3px; }
+    footer { display:flex; gap:30px; justify-content:space-between; padding-top:20px; font-size:11px; color:var(--muted); line-height:1.7; }
+    @media(max-width:700px) { main { padding:24px 16px; } header { display:block; } .edition { margin-top:20px; } nav button { padding:14px 10px; font-size:11px; flex:1; } .details { grid-template-columns:1fr; gap:22px; } footer { display:block; } figcaption { display:block; line-height:1.7; } .source div { grid-template-columns:110px 1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><div class="eyebrow">An island, an inherited book, a little trouble</div><h1>Little Witches in the Wood</h1><p>First-person cooperative exploration &amp; crafting.</p></div>
+    <div class="edition meta">UNITY STORYBOARD<br>Actual asset meshes + custom props<br>1-4 players / proposed game</div>
+  </header>
+  <nav aria-label="Storyboard views">
+    <button type="button" data-shot="0" aria-pressed="true">01 / Explore the wood</button>
+    <button type="button" data-shot="1" aria-pressed="false">02 / Make your own answer</button>
+    <button type="button" data-shot="2" aria-pressed="false">03 / His royal croakness</button>
+  </nav>
+  <figure><img id="shot" src="01-Exploration.png" alt="Unity render of a first-person forest expedition with witch teammates, mushrooms, a cottage, and a cave."><figcaption><span id="caption">STAGED UNITY RENDER / FOREST EXPLORATION</span><span>2048 x 1152 / URP / FIRST PERSON</span></figcaption></figure>
+  <section class="details" aria-live="polite">
+    <div><h2 id="heading">Curiosity is the compass.</h2><p id="description">Gather mushrooms along the trail, investigate the ore-lit cave, or return to Grandpa's cottage. A tower on another floating outcrop keeps the larger mystery in sight.</p></div>
+    <div class="source" id="sources"><div><span>Woodland</span><span>POLYGON Enchanted Forest</span></div><div><span>Landmarks</span><span>POLYGON Fantasy Kingdom</span></div><div><span>Teammates</span><span>POLYGON Fantasy Characters</span></div><div><span>Custom geometry</span><span>Island, cave, ore, hands and gathering tool</span></div></div>
+  </section>
+  <footer><span>These previews show the proposed game's art and composition.<br>Gathering, brewing, combat, and progression remain design work.</span><span><a id="full" href="01-Exploration.png" target="_blank" rel="noopener">Open full-resolution render</a><br><a href="../../docs/visuals/UNITY_VISUALIZATION.md">Scene locations, asset provenance &amp; rebuild guide</a></span></footer>
+</main>
+<script>
+  const shots = [
+    { file:'01-Exploration.png', title:'FOREST EXPLORATION', heading:'Curiosity is the compass.', description:"Gather mushrooms along the trail, investigate the ore-lit cave, or return to Grandpa's cottage. A tower on another floating outcrop keeps the larger mystery in sight.", alt:'Unity render of a first-person forest expedition with witch teammates, mushrooms, a cottage, and a cave.', sources:[['Woodland','POLYGON Enchanted Forest'],['Landmarks','POLYGON Fantasy Kingdom'],['Teammates','POLYGON Fantasy Characters'],['Custom geometry','Island, cave, ore, hands and gathering tool']] },
+    { file:'02-Crafting-Brewing.png', title:'CRAFTING & BREWING', heading:'Bring discoveries home.', description:'A workbench and a brewing station give gathered resources different uses. Prepare tools and potions together, then choose the next expedition.', alt:'Unity render of the cottage interior with crafting furniture, two witch teammates and a teal cauldron in the foreground.', sources:[['Furniture','SIMPLE Fantasy Interiors'],['Teammates','POLYGON Fantasy Characters'],['Outside window','POLYGON Enchanted Forest'],['Custom geometry','Room shell, cauldron, brew, bottles and held herb']] },
+    { file:'03-Frog-King.png', title:'FROG KING FIGHT', heading:'A crown worth challenging.', description:"The King leaps into the arena. His amber landing ring leaves clear room to dodge while teammates attack and recover. The Heartseed and sky gate connect the fight to the island's story.", alt:'Unity render of a giant custom low-poly Frog King leaping above a ruined marsh arena with an amber landing warning and two teammates.', sources:[['Arena ruins','POLYGON Enchanted Forest'],['Sky gate tower','POLYGON Fantasy Kingdom'],['Teammates','POLYGON Fantasy Characters'],['Custom geometry','Frog King, crown, Heartseed, paving and leap warning']] }
+  ];
+  document.querySelectorAll('[data-shot]').forEach(button => button.addEventListener('click', () => {
+    const data = shots[Number(button.dataset.shot)];
+    document.querySelectorAll('[data-shot]').forEach(peer => peer.setAttribute('aria-pressed', String(peer === button)));
+    const shot = document.getElementById('shot'); shot.src = data.file; shot.alt = data.alt;
+    document.getElementById('caption').textContent = 'STAGED UNITY RENDER / ' + data.title;
+    document.getElementById('heading').textContent = data.heading;
+    document.getElementById('description').textContent = data.description;
+    document.getElementById('full').href = data.file;
+    const sources = document.getElementById('sources'); sources.replaceChildren();
+    data.sources.forEach(pair => { const row = document.createElement('div'); pair.forEach(value => { const span = document.createElement('span'); span.textContent = value; row.appendChild(span); }); sources.appendChild(row); });
+  }));
+</script>
+</body>
+</html>

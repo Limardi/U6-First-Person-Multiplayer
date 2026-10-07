@@ -107,3 +107,12 @@ InitTestScene*.unity*
 
 # AI tooling
 /AI/
+
+# Licensed visualization source packs are installed locally.
+/Assets/Visualization/Imported/
+
+# Download caches and temporary visualization captures.
+/output/asset-visualization/packages/
+/output/asset-visualization/*download-page.html
+/output/unity-island/mcp-checks/
+/output/imagegen/

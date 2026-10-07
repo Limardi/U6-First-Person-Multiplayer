@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Little Witches - Floating Forest Island</title>
+  <style>
+    :root { --paper:#eeeadd; --ink:#243c30; --muted:#647061; --line:#c9cdbc; --gold:#a27737; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:radial-gradient(ellipse at 90% 0%,#d8e3d2,transparent 55%),var(--paper); font-family:Georgia,'Times New Roman',serif; }
+    main { max-width:1480px; margin:auto; padding:54px 5vw 70px; }
+    header { display:grid; grid-template-columns:2fr 1fr; gap:40px; align-items:end; margin-bottom:35px; }
+    .eyebrow, .number, footer { font:12px/1.6 'Courier New',monospace; letter-spacing:.08em; }
+    .eyebrow { color:var(--gold); text-transform:uppercase; }
+    h1 { font-weight:normal; font-size:clamp(38px,5.4vw,78px); line-height:1.04; margin:14px 0 0; letter-spacing:-.04em; }
+    header p { font-size:17px; line-height:1.6; color:var(--muted); margin:0; }
+    figure { margin:0; }
+    a { color:inherit; }
+    .image-link { display:block; overflow:hidden; background:#d0d8c9; border:1px solid var(--line); }
+    img { width:100%; display:block; aspect-ratio:16/9; object-fit:cover; }
+    figcaption { display:flex; align-items:baseline; gap:16px; margin-top:13px; }
+    h2 { margin:0; font-size:23px; font-weight:normal; }
+    .number { color:var(--gold); }
+    .caption { margin:8px 0 0 38px; color:var(--muted); line-height:1.55; font-size:15px; }
+    .views { display:grid; grid-template-columns:1fr 1fr; gap:34px 25px; padding-top:42px; }
+    footer { border-top:1px solid var(--line); margin-top:44px; padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:15px; color:var(--muted); }
+    a:focus-visible { outline:3px solid var(--gold); outline-offset:5px; }
+    details { margin-top:38px; border-top:1px solid var(--line); padding-top:18px; }
+    summary { cursor:pointer; color:var(--muted); margin-bottom:16px; }
+    @media(max-width:700px) { main { padding:30px 5vw 40px; } header { grid-template-columns:1fr; gap:22px; } .views { grid-template-columns:1fr; gap:30px; } h2 { font-size:21px; } footer { letter-spacing:0; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><div class="eyebrow">Little Witches in the Wood / Environment Study 01</div><h1>A wood above<br>the clouds.</h1></div>
+    <p>Sunlit wildflowers, a shaded mushroom grove, and the ancient guardian's clearing beneath a cloud-filled sky. Actual Synty assets, staged and rendered in Unity 6 through Unity MCP.</p>
+  </header>
+  <figure>
+    <a class="image-link" href="01-Island-Overview.png"><img src="01-Island-Overview.png" alt="Floating woodland island with Grandpa's cottage, a stone ridge, and clouds below its tapered underside"></a>
+    <figcaption><span class="number">01</span><h2>The Floating Island</h2></figcaption>
+    <p class="caption">A broken stone silhouette beneath a raised home terrace, open meadow, and woodland threaded with branching trails.</p>
+  </figure>
+  <div class="views">
+    <figure>
+      <a class="image-link" href="02-Cottage-Approach.png"><img src="02-Cottage-Approach.png" alt="Approach to Grandpa's timber cottage and garden" loading="lazy"></a>
+      <figcaption><span class="number">02</span><h2>A Place To Return</h2></figcaption>
+      <p class="caption">The cottage exterior, ingredient beds, and outdoor preparation table.</p>
+    </figure>
+    <figure>
+      <a class="image-link" href="03-Forest-Trail.png"><img src="03-Forest-Trail.png" alt="Eye-level view along a forest trail lined with plants and mushrooms" loading="lazy"></a>
+      <figcaption><span class="number">03</span><h2>Into The Familiar Wood</h2></figcaption>
+      <p class="caption">Clustered trees, shaded logs, and ingredient habitats, with signs and lanterns at the trail forks.</p>
+    </figure>
+    <figure>
+      <a class="image-link" href="04-Cave-Entrance.png"><img src="04-Cave-Entrance.png" alt="Rocky cave entrance with roots, a warm lantern, and teal crystal accents" loading="lazy"></a>
+      <figcaption><span class="number">04</span><h2>Something Worth Discovering</h2></figcaption>
+      <p class="caption">A cave entrance tucked into the ridge, hinting at a future expedition below ground.</p>
+    </figure>
+    <figure>
+      <a class="image-link" href="05-Mushroom-Grove.png"><img src="05-Mushroom-Grove.png" alt="Large spotted mushrooms above mossy rocks, blue mushrooms, and ferns" loading="lazy"></a>
+      <figcaption><span class="number">05</span><h2>The Mushroom Grove</h2></figcaption>
+      <p class="caption">Cool green ground, fallen logs, and clustered fungi create a shaded ingredient habitat.</p>
+    </figure>
+    <figure>
+      <a class="image-link" href="06-Guardian-Grove.png"><img src="06-Guardian-Grove.png" alt="Ancient giant tree in an open clearing framed by roots, ruins, and teal crystals" loading="lazy"></a>
+      <figcaption><span class="number">06</span><h2>Where The Guardian Sleeps</h2></figcaption>
+      <p class="caption">An ancient tree rises above a moss clearing, with old ruins and Moon Crystals along its edge.</p>
+    </figure>
+    <figure>
+      <a class="image-link" href="07-Meadow-And-Sky.png"><img src="07-Meadow-And-Sky.png" alt="Wildflower meadow and branching trail beneath layered clouds and the afternoon sun" loading="lazy"></a>
+      <figcaption><span class="number">07</span><h2>A Break In The Canopy</h2></figcaption>
+      <p class="caption">An open meadow of flower clumps beneath a procedural sky, with a sun aligned to the scene lighting.</p>
+    </figure>
+  </div>
+  <details>
+    <summary>See the island overview before this refinement</summary>
+    <a class="image-link" href="review-before/01-Island-Overview.png"><img src="review-before/01-Island-Overview.png" alt="Earlier island overview before changes to the rocky silhouette, sightlines, and lighting" loading="lazy"></a>
+  </details>
+  <footer><span>UNITY 6 / URP / 2048 x 1152 / VISUAL SHOWCASE</span><span><a href="used-prefabs.txt">Asset manifest</a> &middot; <a href="scene-report.txt">Scene report</a> &middot; Click any image for full size</span></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Scene: Assets/Visualization/Scenes/04-Forest-Island.unity
+Seed: 61006
+Cameras: 7
+Distinct source prefabs: 85
+Placement fingerprint: 53A79ACBACCC8EE56388B96D41F78A7D4C0130F579732D4AA6D180FA7AD2D874
+Render size: 2048 x 1152
+Biomes: sunny wildflower meadow, shaded mushroom grove, ancient guardian grove, rocky cave ridge
+Skybox: layered cloud sky, matching sun disc, warm horizon
+Reload validation: passed
